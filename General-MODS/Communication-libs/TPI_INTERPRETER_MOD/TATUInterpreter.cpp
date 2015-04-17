@@ -12,7 +12,7 @@ bool TATUInterpreter::parse(unsigned char *string, uint8_t length){
             if(string[4] == CODE_INFO){
                 cmd.OBJ.CODE = TATU_CODE_INFO;
                 HASH_DJB(9, length, string, str_hash);
-                j = i; VAR_COPY(j, length, string);
+                j = 9; VAR_COPY(j, length, string);
             }
             else if(string[4] == CODE_STATE){
                 cmd.OBJ.CODE = TATU_CODE_STATE;
@@ -31,6 +31,7 @@ bool TATUInterpreter::parse(unsigned char *string, uint8_t length){
             else if(string[4] == CODE_INFO){
                 cmd.OBJ.CODE = TATU_CODE_INFO;
                 HASH_DJB(9, length, string, str_hash);
+                j = 9; VAR_COPY(j, length, string);
             }
             else if(string[4] == CODE_STATE){
                 cmd.OBJ.CODE = TATU_CODE_STATE;
@@ -44,7 +45,7 @@ bool TATUInterpreter::parse(unsigned char *string, uint8_t length){
             if(string[5] == CODE_INFO){
                 cmd.OBJ.CODE = TATU_CODE_INFO;
                 HASH_DJB(10, length, string, str_hash);
-                j = i; VAR_COPY(j, length, string);
+                j = 10; VAR_COPY(j, length, string);
             }
             else if(string[5] == CODE_STATE){
                 cmd.OBJ.CODE = TATU_CODE_STATE;
